@@ -59,7 +59,7 @@ def show_current_fund(event):
 		total += amount
 	table_current_fund.insert('', 'end', values=("总金额", total/100))
 	profit_base = cal_profit_by_rate(res, 1)
-	for rate in range(1, 11):
+	for rate in range(3, 21):
 		profit = profit_base * rate
 		table_cal_profit.insert('', rate-1, values=(str(rate)+'%', round(profit, 2)))
 	return
